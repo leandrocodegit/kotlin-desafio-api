@@ -1,0 +1,13 @@
+ALTER TABLE usuario_enderecos
+ADD CONSTRAINT FK_ENDERECO_ID
+  FOREIGN KEY (`enderecos_id`)
+  REFERENCES `clientes`.`endereco` (`id`)
+  ON DELETE RESTRICT
+  ON UPDATE RESTRICT,
+ADD CONSTRAINT `FK_USUARIO_ID`
+  FOREIGN KEY (`usuario_ID`)
+  REFERENCES `clientes`.`usuario` (`id`)
+  ON DELETE RESTRICT
+  ON UPDATE RESTRICT;
+
+
