@@ -22,6 +22,7 @@ class RabbitMQListener(
             val body = message.body?.let { String(it) }
 
             var purchasesResponse: PurchasesResponse = Gson().fromJson(body, PurchasesResponse::class.java)
+        println(purchasesResponse)
 
             deliveryService.saveDelivery(
                 Delivery(
